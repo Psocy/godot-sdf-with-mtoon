@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cu01il6qc4p65"]
+
+[ext_resource type="Shader" uid="uid://cq3hnlcdmx5tu" path="res://shaders/face_sdf_shadow.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://c8st5vfwvi5rx" path="res://output.png" id="2_sdf"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_shader")
+shader_parameter/sdf_texture = ExtResource("2_sdf")
+shader_parameter/shadow_tint = Color(0.62, 0.55, 0.72, 1)
+shader_parameter/feather = 0.02
+shader_parameter/light_dir_xz = Vector2(0.3, 0)
+shader_parameter/debug_sdf = 0.0
